@@ -3,7 +3,7 @@ const {themes} = require('prism-react-renderer');
 module.exports = {
   title: 'AI Engineer Handbook',
   tagline: 'Free curated preparation materials for AI engineers',
-  url: 'https://www.aiengineerhandbook.com',
+  url: 'https://www.aiengineerhandbook.org',
   baseUrl: '/',
   trailingSlash: true,
   organizationName: 'aiengineerhandbook',
@@ -39,7 +39,7 @@ module.exports = {
           position: 'left',
         },
         {
-          href: 'https://github.com/aiengineerhandbook/aiengineerhandbook',
+          href: 'https://github.com/QuocVietHa08/ai-engineer-handbook',
           position: 'right',
           'aria-label': 'GitHub repository',
           className: 'navbar-icon',

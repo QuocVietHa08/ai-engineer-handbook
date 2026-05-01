@@ -30,3 +30,27 @@
 .theme-doc-sidebar-container {
   border-right: 1px solid var(--ifm-color-emphasis-200);
 }
+
+.shoutout {
+  display: block;
+  padding: 16px 20px;
+  background: var(--ifm-color-emphasis-100);
+  border-left: 4px solid var(--ifm-color-primary);
+  border-radius: 6px;
+  color: var(--ifm-font-color-base);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+
+.shoutout:hover {
+  background: var(--ifm-color-emphasis-200);
+  color: var(--ifm-font-color-base);
+  text-decoration: none;
+}
+
+.shoutout u {
+  color: var(--ifm-color-primary);
+  text-decoration: underline;
+}
