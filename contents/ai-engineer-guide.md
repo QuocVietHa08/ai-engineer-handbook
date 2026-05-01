@@ -48,12 +48,12 @@ Learn the craft of getting good output from a model.
 ### Phase 3 — Retrieval-Augmented Generation (RAG)
 Most production AI systems retrieve before they generate. Master the patterns.
 - [RAG overview](/rag/)
-- [Basic RAG](/rag-patterns/basic-rag/), [hybrid retrieval](/rag-patterns/hybrid-retrieval/), [agentic RAG](/rag-patterns/agentic-rag/), [deep search](/rag-patterns/deep-search/)
+- [Basic RAG](/rag/basic-rag/), [hybrid retrieval](/rag/hybrid-retrieval/), [agentic RAG](/rag/agentic-rag/), [deep search](/rag/deep-search/)
 
 ### Phase 4 — Agents and tool use
 Move from one-shot prompts to systems that plan, call tools, and act.
 - [AI agents](/ai-agents/)
-- Patterns: [tool calling](/agent-patterns/tool-calling/), [ReAct loop](/agent-patterns/react-loop/), [plan-and-execute](/agent-patterns/plan-and-execute/), [multi-agent](/agent-patterns/multi-agent-collaboration/), [code execution](/agent-patterns/code-execution/)
+- Patterns: [tool calling](/agents/tool-calling/), [ReAct loop](/agents/react-loop/), [plan-and-execute](/agents/plan-and-execute/), [multi-agent](/agents/multi-agent-collaboration/), [code execution](/agents/code-execution/)
 - [MCP (Model Context Protocol)](/mcp/) — standard way to expose tools and context
 
 ### Phase 5 — Production
