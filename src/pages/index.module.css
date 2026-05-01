@@ -1,0 +1,132 @@
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 520px);
+  gap: 56px;
+  align-items: center;
+  min-height: calc(100vh - var(--ifm-navbar-height));
+  padding: 76px max(24px, calc((100vw - 1180px) / 2)) 54px;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.heroCopy {
+  max-width: 760px;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: var(--ifm-color-primary-dark);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.heroTitle {
+  max-width: 11ch;
+  margin: 0;
+  font-size: clamp(3.4rem, 8vw, 7.4rem);
+  line-height: 0.92;
+}
+
+.heroSubtitle {
+  max-width: 650px;
+  margin: 24px 0 0;
+  color: var(--ifm-color-emphasis-700);
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 34px;
+}
+
+.map {
+  display: grid;
+  gap: 12px;
+  padding: 24px;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 8px;
+  background:
+    linear-gradient(90deg, rgba(23, 32, 27, 0.06) 1px, transparent 1px),
+    linear-gradient(rgba(23, 32, 27, 0.06) 1px, transparent 1px),
+    var(--ifm-background-surface-color);
+  background-size: 34px 34px;
+  box-shadow: 0 18px 45px rgba(21, 40, 31, 0.12);
+}
+
+.mapNode {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 58px;
+  padding: 14px 16px;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 8px;
+  background: var(--ifm-background-color);
+  font-weight: 800;
+}
+
+.mapNode span {
+  color: var(--ifm-color-primary-dark);
+}
+
+.section {
+  padding: 76px max(24px, calc((100vw - 1180px) / 2));
+}
+
+.sectionHeader {
+  max-width: 780px;
+  margin-bottom: 32px;
+}
+
+.sectionHeader h2 {
+  font-size: clamp(2rem, 4vw, 4.5rem);
+  line-height: 1.02;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.card {
+  display: block;
+  min-height: 190px;
+  padding: 24px;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 8px;
+  color: var(--ifm-font-color-base);
+  background: var(--ifm-background-surface-color);
+  text-align: left;
+}
+
+.card:hover {
+  border-color: var(--ifm-color-primary);
+  color: var(--ifm-font-color-base);
+  text-decoration: none;
+}
+
+.card p {
+  margin: 0;
+  color: var(--ifm-color-emphasis-700);
+}
+
+@media (max-width: 996px) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .cardGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .heroTitle {
+    font-size: 3.35rem;
+  }
+}
