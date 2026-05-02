@@ -82,6 +82,36 @@ When adding a new pattern page, follow the existing structure:
 - Trade-offs and failure modes
 - Cross-links to related pages
 
+### Authoring images
+
+Images live under [`static/img/`](./static/img/), grouped by lesson `id`:
+
+```
+static/img/
+└── <lesson-id>/
+    └── <image-name>.png
+```
+
+Reference them with the shared `.lesson-figure` pattern (defined in [`src/css/custom.css`](./src/css/custom.css)):
+
+```html
+<figure class="lesson-figure">
+  <img
+    src="/img/<lesson-id>/<image-name>.png"
+    alt="Descriptive sentence — used by screen readers and AI search"
+  />
+  <figcaption>
+    Optional caption explaining what the image shows.
+  </figcaption>
+</figure>
+```
+
+Notes:
+- Use absolute path (`/img/...`) — Docusaurus rewrites it to the correct base URL.
+- Always write meaningful `alt` text; never `alt=""` unless the image is purely decorative.
+- Keep images under ~200 KB; SVG for diagrams, PNG for screenshots, WebP for photos.
+- The build will fail if a referenced image does not exist — add the file before pushing.
+
 ## License
 
 MIT — free to use, fork, and adapt. Attribution appreciated.
