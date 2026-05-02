@@ -1,90 +1,136 @@
+<p align="center">
+  <img src="./assest/logo2.png" alt="AI Engineer Handbook" width="280" />
+</p>
+
 # AI Engineer Handbook
 
-> Free, curated learning roadmap for becoming an AI engineer — from foundation model basics to shipping production LLM systems.
+> Free, open learning resource for engineers becoming AI engineers — from foundation model basics to shipping production LLM systems, plus career growth and interview prep.
 
-Built and maintained by [Edward Ha](https://www.linkedin.com/in/viethadev/), a remote software engineer focused on AI engineering.
+Maintained by [Edward Ha](https://www.linkedin.com/in/viethadev/), a remote software engineer focused on AI engineering.
+
+**This is a knowledge repo first, codebase second.** The site is just the delivery mechanism — the value is in the [`contents/`](./contents/). Read it on the web, fork it, clone it, print it, learn from it.
+
+Live site: open after running `npm run dev`, or browse the markdown directly in [`contents/`](./contents/).
+
+## Who this is for
+
+- Software engineers transitioning into AI engineering
+- Backend / full-stack engineers shipping their first LLM feature
+- Self-taught learners who want a structured path instead of scattered blog posts
+- Engineers prepping for AI engineer interviews (system design, coding, behavioral)
+
+No PhD required. Working knowledge of programming + APIs is enough to start.
 
 ## What's inside
 
-A structured guide covering the full AI engineering stack:
+Structured learning path covering the full AI engineering stack. Each topic is a standalone markdown page in [`contents/`](./contents/) — read in order or jump to what you need.
 
-- **Fundamentals** — how foundation models work, tokens, sampling, embeddings, capabilities + limits
-- **Prompt + context engineering** — repeatable, testable prompts; what to put in the context window
-- **RAG patterns** — basic RAG, hybrid retrieval, agentic RAG, deep search, grounded generation, semantic indexing, retrieval refinement
-- **AI agents** — tool calling, ReAct loops, plan-and-execute, multi-agent collaboration, code execution
-- **MCP (Model Context Protocol)** — standard tool/context exposure
-- **Production** — optimization, evaluation, deployment, observability
-- **Frameworks** — LangChain, Mastra, Pydantic AI
+### Foundations
+- [ML fundamentals](./contents/ml-fundamentals.md) — core concepts before LLMs
+- [LLM fundamentals](./contents/llm-fundamentals.md) — tokens, sampling, embeddings, capabilities + limits
+- [Fundamentals overview](./contents/fundamentals.md)
 
-Sidebar navigation is defined in [`sidebars.js`](./sidebars.js). All handbook content lives under [`contents/`](./contents/).
+### Working with LLMs
+- [Prompt engineering](./contents/prompt-engineering.md) — repeatable, testable prompts
+- [Context engineering](./contents/context-engineering.md) — what goes in the context window and why
+- [Structured outputs and tools](./contents/structured-outputs-and-tools.md)
 
-## Tech stack
+### RAG
+- [RAG overview](./contents/rag.md)
+- [RAG patterns](./contents/rag-patterns/) — basic RAG, hybrid retrieval, agentic RAG, deep search, grounded generation, semantic indexing, retrieval refinement
 
-- [Docusaurus 3.10](https://docusaurus.io/) — documentation site framework
-- React 18 + MDX for content authoring
-- Custom theme swizzles in [`src/theme/`](./src/theme/)
-- Custom homepage in [`src/pages/index.jsx`](./src/pages/index.jsx)
-- Styling in [`src/css/custom.css`](./src/css/custom.css)
+### Agents
+- [AI agents](./contents/ai-agents.md)
+- [Agent patterns](./contents/agent-patterns/) — tool calling, ReAct, plan-and-execute, multi-agent, code execution
+- [MCP (Model Context Protocol)](./contents/mcp.md)
 
-## Development
+### Production
+- [Production AI systems](./contents/production-ai-systems.md)
+- [LLM optimization](./contents/llm-optimization.md)
+- [LLM evaluation](./contents/llm-evaluation.md) + [Evaluations](./contents/evaluations.md)
+- [LLM deployment](./contents/llm-deployment.md)
+- [LLM observability](./contents/llm-observability.md)
+- [Fine-tuning](./contents/fine-tuning.md)
+- [AI system design](./contents/ai-system-design.md)
 
-Prerequisites: Node.js 18+ and npm.
+### Frameworks
+- [Agentic frameworks](./contents/agentic-frameworks.md)
+- [Frameworks deep dive](./contents/frameworks/) — LangChain, Mastra, Pydantic AI
 
-```bash
-# Install dependencies
-npm install
+## Recommended books
 
-# Start the dev server (http://localhost:3000)
-npm run dev
+Top 3 must-reads for becoming an AI engineer:
 
-# Build for production
-npm run build
+- [AI Engineering](https://www.oreilly.com/library/view/ai-engineering/9781098166298/) — Chip Huyen
+- [Designing Machine Learning Systems](https://www.amazon.com/Designing-Machine-Learning-Systems-Production-Ready/dp/1098107969) — Chip Huyen
+- [Build a Large Language Model (From Scratch)](https://www.manning.com/books/build-a-large-language-model-from-scratch) — Sebastian Raschka
 
-# Clear Docusaurus cache (run after swizzle changes)
-npm run docusaurus clear
-```
+## Where to keep learning
 
-## Project structure
+Sites and blogs worth following:
+
+- [Anthropic blog](https://www.anthropic.com/news) — model capabilities, safety, applied research
+- [Anthropic Engineering](https://www.anthropic.com/engineering) — building with Claude, agents, MCP
+- [OpenAI blog](https://openai.com/blog) — model releases, applied research
+- [LangChain blog](https://blog.langchain.dev/) — RAG patterns, agent tooling, framework deep dives
+- [Mastra blog](https://mastra.ai/blog) — TypeScript-first agent framework + patterns
+- [Pydantic AI docs](https://ai.pydantic.dev/) — type-safe agents in Python
+- [Hugging Face blog](https://huggingface.co/blog) — open models, fine-tuning, evals
+- [Chip Huyen's blog](https://huyenchip.com/blog/) — ML systems, AI engineering essays
+- [Simon Willison's blog](https://simonwillison.net/) — practical LLM experiments + commentary
+- [Latent Space](https://www.latent.space/) — podcast + newsletter on applied AI
+
+## How to use this handbook
+
+**New to AI engineering?** Work top-down: [LLM fundamentals](./contents/llm-fundamentals.md) → [Prompt engineering](./contents/prompt-engineering.md) → [RAG](./contents/rag.md) → [AI agents](./contents/ai-agents.md) → [Production AI systems](./contents/production-ai-systems.md).
+
+**Already shipping?** Jump to specific topics. Production, RAG patterns, and Agent patterns are reference-grade — bookmark and revisit.
+
+Read modes:
+- **Browse on GitHub** — markdown renders fine, links work, no setup
+- **Clone and read offline** — `git clone` and open `contents/` in any markdown reader
+
+## Repo layout
 
 ```
 ai-engineer-handbook/
-├── contents/              # All handbook markdown content
+├── contents/              # ← the actual handbook (all knowledge lives here)
 │   ├── ai-engineer-guide.md
-│   ├── fundamentals.md
+│   ├── llm-fundamentals.md
 │   ├── rag-patterns/
 │   ├── agent-patterns/
 │   └── ...
-├── src/
-│   ├── css/custom.css     # Global styles + .shoutout banner
-│   ├── pages/index.jsx    # Custom homepage
-│   └── theme/             # Docusaurus swizzled components
-│       └── DocItem/Content/index.js  # Banner injection on every doc page
-├── sidebars.js            # Sidebar nav structure
-├── docusaurus.config.js   # Site config
+├── sidebars.js            # site nav structure
+├── src/                   # site theme + custom homepage (Docusaurus)
+├── docusaurus.config.js
 └── package.json
 ```
 
+If you only care about the knowledge, you only need [`contents/`](./contents/) and [`sidebars.js`](./sidebars.js).
+
 ## Contributing
 
-Contributions welcome — typo fixes, new patterns, code examples, clarifications.
+Knowledge contributions welcome — corrections, new patterns, real-world examples, clearer explanations, broken-link fixes.
 
-1. Fork and clone the repo
-2. Create a feature branch: `git checkout -b add-xyz-pattern`
-3. Add or edit markdown under [`contents/`](./contents/)
-4. If adding a new page, register it in [`sidebars.js`](./sidebars.js)
-5. Run `npm run dev` and verify the page renders
-6. Open a pull request
+1. Fork and clone
+2. Branch: `git checkout -b add-xyz-pattern`
+3. Edit markdown under [`contents/`](./contents/)
+4. New page? Register it in [`sidebars.js`](./sidebars.js)
+5. Run `npm run dev`, verify rendering
+6. Open PR
 
-When adding a new pattern page, follow the existing structure:
-- Frontmatter with `id`, `title`, `slug`
-- Short intro explaining when to use the pattern
+Page structure for new patterns:
+- Frontmatter (`id`, `title`, `slug`)
+- Short intro — when to use this pattern
 - Concrete example (code or pseudocode)
 - Trade-offs and failure modes
 - Cross-links to related pages
 
+Prefer accuracy and concreteness over cleverness. Cite sources when claims are non-obvious.
+
 ## License
 
-MIT — free to use, fork, and adapt. Attribution appreciated.
+MIT — free to use, fork, adapt, translate, teach with. Attribution appreciated.
 
 ## Connect
 
@@ -92,4 +138,4 @@ MIT — free to use, fork, and adapt. Attribution appreciated.
 - GitHub: [QuocVietHa08](https://github.com/QuocVietHa08)
 - Repo: [QuocVietHa08/ai-engineer-handbook](https://github.com/QuocVietHa08/ai-engineer-handbook)
 
-If this handbook helps you, a star on GitHub keeps the project visible to other engineers learning the same path.
+Star the repo if it helps — keeps it visible to other engineers on the same path.
