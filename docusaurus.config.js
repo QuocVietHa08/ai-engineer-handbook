@@ -8,6 +8,10 @@ module.exports = {
   trailingSlash: true,
   organizationName: 'aiengineerhandbook',
   projectName: 'aiengineerhandbook',
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
   themeConfig: {
     navbar: {
       title: 'AI Engineer Handbook',

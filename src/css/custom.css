@@ -54,3 +54,23 @@
   color: var(--ifm-color-primary);
   text-decoration: underline;
 }
+
+/* Lesson figure: centered image with caption */
+.lesson-figure {
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.lesson-figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.lesson-figure figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-700);
+  font-style: italic;
+}
